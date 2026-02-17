@@ -1,24 +1,50 @@
-# Lab 2 - Landing page
+# ForexPro - Forex Trading Signals Landing Page
 
-Create a web page for your/friends/relatives business (example: car-rent, cookies-shop, crypto-scam)
+A professional landing page for a forex trading signals service that helps traders succeed in the currency markets.
 
-> For a maximal grade, the website should be for a real client (your/friends/relatives business), otherwise -1-2 points
+## About
 
-## Customer requirements
+ForexPro is a landing page for a forex trading signals and education platform. The website is designed to attract and convert potential customers by showcasing the service's features, proven results, pricing plans, and an easy sign-up process.
 
-- Some form of navigation to sections (links, buttons)
-- Call to action
-- At least 4 sections ([see examples](https://webflow.com/blog/high-converting-landing-page))
-- Pleasant to the eyes
+## Features
 
-## Dev requirements
+- **Responsive Design** - Works on desktop, tablet, and mobile devices
+- **Modern UI** - Dark theme with teal/green accents representing growth and money
+- **6 Sections:**
+  1. Hero section with statistics and call-to-action
+  2. Features section showcasing service benefits
+  3. How It Works - 3-step process
+  4. Results/Testimonials from successful traders
+  5. Pricing plans (Starter, Professional, Elite)
+  6. Contact form for sign-ups
+- **Smooth scrolling navigation**
+- **Hover effects and animations**
 
-- Use vanilla CSS and HTML (no frameworks)
-- Have a decent git history (no one commit)
-- The page should be deployed on a free hosting service (example: GitHub Pages, Vercel, Netlify)
-- Project repo should have a README with a short description of the landing page topic, screenshots, and a link to the live demo
+## Technologies Used
 
-## Other requirements:
+- HTML5
+- CSS3 (Vanilla - no frameworks)
+- Responsive design with CSS Grid and Flexbox
 
-- For potential maximal mark, a WIP version should be submitted during the class
-- Use index.html, reset.css
+## Screenshots
+
+![Hero Section](screenshots/hero.png)
+![Features Section](screenshots/features.png)
+![Pricing Section](screenshots/pricing.png)
+
+## Live Demo
+
+🔗 [View Live Demo](https://nick34567890.github.io/tum-web-lab2/)
+
+## Getting Started
+
+1. Clone the repository
+2. Open `index.html` in your browser
+
+## Author
+
+Nichita Gancear
+
+## License
+
+This project is for educational purposes - TUM Web Development Lab 2.
