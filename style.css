@@ -643,6 +643,41 @@ h3 {
   color: #555555;
 }
 
+.floating-mascot {
+  position: fixed;
+  right: 14px;
+  bottom: 10px;
+  z-index: 1020;
+  opacity: 0;
+  transform: translateY(24px);
+  pointer-events: auto;
+  cursor: pointer;
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+  background: rgba(11, 20, 32, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.floating-mascot.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.floating-mascot:hover {
+  transform: translateY(-4px) scale(1.03);
+}
+
+.floating-mascot img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+  filter: drop-shadow(0 8px 22px rgba(0, 0, 0, 0.35));
+}
+
 /* Burger Button */
 .burger {
   display: none;
@@ -880,6 +915,11 @@ h3 {
     padding: 16px 32px;
     font-size: 1rem;
   }
+
+  .floating-mascot img {
+    width: 110px;
+    height: 110px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -910,5 +950,15 @@ h3 {
 
   .amount {
     font-size: 3rem;
+  }
+
+  .floating-mascot {
+    right: 8px;
+    bottom: 8px;
+  }
+
+  .floating-mascot img {
+    width: 90px;
+    height: 90px;
   }
 }
