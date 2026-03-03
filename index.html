@@ -14,7 +14,7 @@
         <img src="screenshots/ForexPro_Logo.png" alt="ForexPro Logo" />
       </a>
       <div class="nav-pill">
-        <ul class="nav-links-left" id="nav-links">
+        <ul class="nav-links-left">
           <li><a href="#hero" class="nav-link active">Home</a></li>
           <li><a href="#features" class="nav-link">Features</a></li>
           <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
@@ -23,16 +23,33 @@
           <li><a href="#contact" class="nav-link">Contact Us</a></li>
         </ul>
         <a href="#contact" class="btn btn-get-started">Get Started</a>
-        <button class="burger" id="burger" aria-label="Toggle menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+      </div>
+      <button class="burger" id="burger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <!-- Mobile fullscreen menu -->
+      <div class="mobile-menu" id="mobile-menu">
+        <ul>
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#features" class="nav-link">Features</a></li>
+          <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+          <li><a href="#results" class="nav-link">Results</a></li>
+          <li><a href="#pricing" class="nav-link">Pricing</a></li>
+          <li><a href="#contact" class="nav-link">Contact Us</a></li>
+        </ul>
       </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
+      <video autoplay muted playsinline loop
+        poster="https://images.contentstack.io/v3/assets/bltc23b87e0fef43b66/blt694ae96e120449c7/682f555e5dce1367b6472e67/HOMEPAGE_Banner_Thumbnail.jpg?format=pjpg&auto=webp&quality=90"
+        class="hero-bg-video">
+        <source src="https://assets.contentstack.io/v3/assets/bltc23b87e0fef43b66/blt6ec8c4aeb939de40/6765ae56989c53a90cd50963/TT1739_TFX-Tier-00HOMEPAGE_241220_02.mp4" type="video/mp4">
+      </video>
+      <div class="hero-bg-overlay"></div>
       <div class="container hero-content">
         <h1>Trade Smarter, Not Harder</h1>
         <p class="hero-subtitle">
@@ -289,7 +306,7 @@
 
     <script>
       const burger = document.getElementById('burger');
-      const navLinks = document.getElementById('nav-links');
+      const mobileMenu = document.getElementById('mobile-menu');
       const navbar = document.getElementById('navbar');
       const allNavLinks = document.querySelectorAll('.nav-link');
       const sections = document.querySelectorAll('section[id]');
@@ -297,14 +314,14 @@
       // Burger toggle
       burger.addEventListener('click', () => {
         burger.classList.toggle('active');
-        navLinks.classList.toggle('open');
+        mobileMenu.classList.toggle('open');
       });
 
       // Close menu when a link is clicked
-      navLinks.querySelectorAll('a').forEach(link => {
+      mobileMenu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
           burger.classList.remove('active');
-          navLinks.classList.remove('open');
+          mobileMenu.classList.remove('open');
         });
       });
 
