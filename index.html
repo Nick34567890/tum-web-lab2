@@ -281,7 +281,7 @@
            <div class="footer-links">
             <h4>Personal Contact</h4>
             <ul>
-              <li><a href="mailto:alex.rusu.trader@gmail.com">Nichita.Gancear.trader@gmail.com</a></li>
+              <li><a href="mailto:Nichita.Gancear.trader@gmail.com">Nichita.Gancear.trader@gmail.com</a></li>
               <li><a href="tel:+37368124590">+373 76633001</a></li>
               <li><a href="#">Chișinău, Moldova</a></li>
             </ul>
@@ -311,10 +311,15 @@
       </div>
     </footer>
 
+    <a href="#contact" class="floating-mascot" id="floating-mascot" aria-label="Go to contact section">
+      <img src="mascot/mm_main.png" alt="ForexPro mascot" />
+    </a>
+
     <script>
       const burger = document.getElementById('burger');
       const mobileMenu = document.getElementById('mobile-menu');
       const navbar = document.getElementById('navbar');
+      const floatingMascot = document.getElementById('floating-mascot');
       const allNavLinks = document.querySelectorAll('.nav-link');
       const sections = document.querySelectorAll('section[id]');
 
@@ -363,6 +368,10 @@
           document.querySelector('.nav-link[href="#hero"]').classList.add('active');
         }
       });
+
+      setTimeout(() => {
+        floatingMascot.classList.add('show');
+      }, 1800);
     </script>
   </body>
 </html>
