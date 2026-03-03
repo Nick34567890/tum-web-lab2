@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   color: #333;
   background-color: #0F0F1A;
@@ -31,8 +31,10 @@ body {
 
 /* Typography */
 h1, h2, h3, h4 {
+  font-family: 'Manrope', 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 700;
   line-height: 1.2;
+  letter-spacing: -0.01em;
 }
 
 h1 {
@@ -241,9 +243,15 @@ h3 {
 
 .hero-subtitle {
   font-size: 1.3rem;
-  color: #AAAAAA;
+  color: #F2F6F8;
   max-width: 600px;
   margin: 0 auto 40px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
+  background: rgba(8, 14, 24, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  backdrop-filter: blur(6px);
+  padding: 12px 16px;
+  border-radius: 12px;
 }
 
 .hero-cta {
@@ -677,6 +685,30 @@ h3 {
   h1 {
     font-size: 2.5rem;
   }
+
+  .navbar {
+    justify-content: flex-end;
+    padding: 12px 20px 12px 120px;
+    gap: 12px;
+  }
+
+  .nav-logo {
+    left: 16px;
+  }
+
+  .nav-logo img {
+    height: 52px;
+  }
+
+  .nav-link {
+    padding: 9px 14px;
+    font-size: 0.85rem;
+  }
+
+  .btn-get-started {
+    padding: 9px 18px;
+    font-size: 0.82rem;
+  }
   
   .features-grid,
   .testimonials-grid,
@@ -701,7 +733,7 @@ h3 {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   h1 {
     font-size: 2rem;
   }
