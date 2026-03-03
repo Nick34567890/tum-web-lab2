@@ -582,6 +582,38 @@ h3 {
   color: #555555;
 }
 
+/* Burger Button */
+.burger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1100;
+}
+
+.burger span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: #FFFFFF;
+  border-radius: 3px;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+.burger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -6px);
+}
+
 /* Responsive Design */
 @media (max-width: 992px) {
   h1 {
@@ -619,11 +651,58 @@ h3 {
   h2 {
     font-size: 1.8rem;
   }
-  
+
+  .burger {
+    display: block;
+  }
+
   .nav-links {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: rgba(15, 15, 26, 0.98);
+    backdrop-filter: blur(15px);
+    padding: 100px 40px 40px;
+    gap: 0;
+    transition: right 0.4s ease;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 1050;
+  }
+
+  .nav-links.open {
+    right: 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 15px 0;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .nav-links .btn-nav {
+    margin-top: 20px;
+    text-align: center;
   }
   
+  .hero {
+    padding-top: 100px;
+    min-height: auto;
+    padding-bottom: 60px;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
   .hero-cta {
     flex-direction: column;
     align-items: center;
@@ -631,13 +710,33 @@ h3 {
   
   .hero-stats {
     flex-direction: column;
-    gap: 30px;
+    gap: 25px;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+  
+  .features,
+  .how-it-works,
+  .results,
+  .pricing,
+  .contact {
+    padding: 60px 0;
+  }
+
+  .section-subtitle {
+    margin-bottom: 40px;
   }
   
   .features-grid,
   .testimonials-grid,
   .pricing-grid {
     grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+    padding: 30px 20px;
   }
   
   .form-row {
@@ -647,5 +746,41 @@ h3 {
   .footer-content {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+
+  .btn-large {
+    padding: 16px 32px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  .hero-cta .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .pricing-card {
+    padding: 30px 20px;
+  }
+
+  .amount {
+    font-size: 3rem;
+  }
+
+  .nav-links {
+    width: 100%;
   }
 }
