@@ -316,6 +316,30 @@
       <span class="mascot-tooltip">👋 Welcome! Need help choosing a plan? Click me.</span>
     </a>
 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        prefix: 'tw-',
+        corePlugins: { preflight: false },
+        theme: {
+          extend: {
+            colors: {
+              deep:    '#4a3341',
+              mid:     '#6d4d6e',
+              purple:  '#7e6991',
+              muted:   '#a3a4be',
+              soft:    '#e0e6e9',
+              cream:   '#f5f2f0',
+            },
+            fontFamily: {
+              serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+              sans:  ['Inter', 'system-ui', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+
     <script>
       const burger = document.getElementById('burger');
       const mobileMenu = document.getElementById('mobile-menu');
