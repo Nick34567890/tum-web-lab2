@@ -19,10 +19,27 @@ ForexPro is a landing page for a forex trading signals and education platform. T
 ![alt text](<screenshots/4Screenshot 2026-02-18 013345.png>)
 ![alt text](<screenshots/5Screenshot 2026-02-18 013518.png>)
 
-## Tech Stack
--HTML5
--CSS3 (Flexbox, Grid, custom properties)
--No JavaScript frameworks or CSS libraries
+
+
+## Lab 3 - Updated UI
+
+This section highlights the updated user interface for Lab 3. Below are screenshots showcasing the improvements and features added.
+
+### Screenshots
+
+#### Screenshot 1: Main Section
+
+![alt text](screenshots/Lab_3.png)
+
+#### Screenshot 2: Freindly Mascot 
+
+![alt text](screenshots/Lab_3_1.png)
+
+#### Screenshot 3: Mobile View
+![alt text](screenshots/Lab_3_2.png)
+
+#### Screenshot 4: Only Mobile 
+![alt text](screenshots/Lab_3_3.png)
 
 ## Author
 
