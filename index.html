@@ -9,25 +9,21 @@
   </head>
   <body>
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-      <a href="#hero" class="nav-logo">
-        <img src="screenshots/ForexPro_Logo.png" alt="ForexPro Logo" />
-      </a>
-      <div class="nav-pill">
-        <ul class="nav-links-left" id="nav-links">
-          <li><a href="#hero" class="nav-link active">Home</a></li>
-          <li><a href="#features" class="nav-link">Features</a></li>
-          <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
-          <li><a href="#results" class="nav-link">Results</a></li>
-          <li><a href="#pricing" class="nav-link">Pricing</a></li>
-          <li><a href="#contact" class="nav-link">Contact Us</a></li>
-        </ul>
-        <a href="#contact" class="btn btn-get-started">Get Started</a>
+    <nav class="navbar">
+      <div class="container nav-container">
+        <a href="#" class="logo">Forex<span>Pro</span></a>
         <button class="burger" id="burger" aria-label="Toggle menu">
           <span></span>
           <span></span>
           <span></span>
         </button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#results">Results</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact" class="btn btn-nav">Get Started</a></li>
+        </ul>
       </div>
     </nav>
 
@@ -290,11 +286,7 @@
     <script>
       const burger = document.getElementById('burger');
       const navLinks = document.getElementById('nav-links');
-      const navbar = document.getElementById('navbar');
-      const allNavLinks = document.querySelectorAll('.nav-link');
-      const sections = document.querySelectorAll('section[id]');
 
-      // Burger toggle
       burger.addEventListener('click', () => {
         burger.classList.toggle('active');
         navLinks.classList.toggle('open');
@@ -306,38 +298,6 @@
           burger.classList.remove('active');
           navLinks.classList.remove('open');
         });
-      });
-
-      // Highlight active section on scroll
-      window.addEventListener('scroll', () => {
-        // Add scrolled class for subtle navbar change
-        if (window.scrollY > 50) {
-          navbar.classList.add('scrolled');
-        } else {
-          navbar.classList.remove('scrolled');
-        }
-
-        // Active link based on scroll position
-        let current = '';
-        sections.forEach(section => {
-          const sectionTop = section.offsetTop - 120;
-          if (window.scrollY >= sectionTop) {
-            current = section.getAttribute('id');
-          }
-        });
-
-        allNavLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === '#' + current) {
-            link.classList.add('active');
-          }
-        });
-
-        // If at the very top, highlight Home
-        if (window.scrollY < 100) {
-          allNavLinks.forEach(link => link.classList.remove('active'));
-          document.querySelector('.nav-link[href="#hero"]').classList.add('active');
-        }
       });
     </script>
   </body>
