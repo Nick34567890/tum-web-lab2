@@ -3,9 +3,10 @@ interface Props {
   tooltip: string;
 }
 const { tooltip } = Astro.props;
+const base = import.meta.env.BASE_URL;
 ---
 <a href="#contact" class="floating-mascot" id="floating-mascot" aria-label="Go to contact section">
-  <img src="/mascot/mm_main.png" alt="ForexPro mascot" />
+  <img src={`${base}/mascot/mm_main.png`} alt="ForexPro mascot" />
   <span class="mascot-tooltip">{tooltip}</span>
 </a>
 

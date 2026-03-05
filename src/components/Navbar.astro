@@ -7,10 +7,12 @@ const navLinks = [
   { label: 'Pricing', href: '#pricing' },
   { label: 'Contact Us', href: '#contact' },
 ];
+const base = import.meta.env.BASE_URL;
 ---
 <nav class="navbar" id="navbar">
+  
   <a href="#hero" class="nav-logo">
-    <img src="/screenshots/ForexPro_Logo.png" alt="ForexPro Logo" />
+    <img src={`${base}/screenshots/ForexPro_Logo.png`} alt="ForexPro Logo" />
   </a>
   <div class="nav-pill">
     <ul class="nav-links-left">
