@@ -3,12 +3,12 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://nick34567890.github.io',
+  base: '/tum-web-lab2',
   integrations: [
     tailwind({
-      // Use existing custom CSS alongside Tailwind
       applyBaseStyles: false,
     }),
   ],
-  // Output as static site
   output: 'static',
 });
