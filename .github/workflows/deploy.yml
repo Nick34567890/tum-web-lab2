@@ -31,13 +31,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build TinaCMS admin panel
-        run: npx tinacms build
-        env:
-          NEXT_PUBLIC_TINA_CLIENT_ID: ${{ secrets.TINA_CLIENT_ID }}
-          TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
-        continue-on-error: true
-
       - name: Build Astro site
         run: npx astro build
         env:
