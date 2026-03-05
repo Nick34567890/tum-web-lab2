@@ -1,0 +1,76 @@
+---
+const navLinks = [
+  { label: 'Home', href: '#hero' },
+  { label: 'Features', href: '#features' },
+  { label: 'How It Works', href: '#how-it-works' },
+  { label: 'Results', href: '#results' },
+  { label: 'Pricing', href: '#pricing' },
+  { label: 'Contact Us', href: '#contact' },
+];
+---
+<nav class="navbar" id="navbar">
+  <a href="#hero" class="nav-logo">
+    <img src="/screenshots/ForexPro_Logo.png" alt="ForexPro Logo" />
+  </a>
+  <div class="nav-pill">
+    <ul class="nav-links-left">
+      {navLinks.map((link) => (
+        <li><a href={link.href} class="nav-link">{link.label}</a></li>
+      ))}
+    </ul>
+    <a href="#contact" class="btn btn-get-started">Get Started</a>
+  </div>
+  <button class="burger" id="burger" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      {navLinks.map((link) => (
+        <li><a href={link.href} class="nav-link">{link.label}</a></li>
+      ))}
+    </ul>
+  </div>
+</nav>
+
+<script>
+  const burger = document.getElementById('burger')!;
+  const mobileMenu = document.getElementById('mobile-menu')!;
+  const navbar = document.getElementById('navbar')!;
+
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('active');
+    mobileMenu.classList.toggle('open');
+  });
+
+  mobileMenu.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      burger.classList.remove('active');
+      mobileMenu.classList.remove('open');
+    });
+  });
+
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 50);
+
+    const sections = document.querySelectorAll<HTMLElement>('section[id]');
+    const allNavLinks = document.querySelectorAll<HTMLAnchorElement>('.nav-link');
+    let current = '';
+
+    sections.forEach((section) => {
+      if (window.scrollY >= section.offsetTop - 120) {
+        current = section.getAttribute('id') ?? '';
+      }
+    });
+
+    allNavLinks.forEach((link) => {
+      link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+    });
+
+    if (window.scrollY < 100) {
+      allNavLinks.forEach((l) => l.classList.remove('active'));
+      document.querySelector<HTMLAnchorElement>('.nav-link[href="#hero"]')?.classList.add('active');
+    }
+  });
+</script>

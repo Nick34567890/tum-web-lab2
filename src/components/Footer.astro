@@ -1,0 +1,48 @@
+---
+interface QuickLink { label: string; href: string; }
+interface LegalLink { label: string; href: string; }
+
+interface Props {
+  copyright: string;
+  disclaimer: string;
+  personal: { heading: string; email: string; phone: string; location: string; };
+  quickLinks: QuickLink[];
+  legal: LegalLink[];
+}
+
+const { copyright, disclaimer, personal, quickLinks, legal } = Astro.props;
+---
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-links">
+        <h4>{personal.heading}</h4>
+        <ul>
+          <li><a href={`mailto:${personal.email}`}>{personal.email}</a></li>
+          <li><a href={`tel:${personal.phone.replace(/\s/g, '')}`}>{personal.phone}</a></li>
+          <li><a href="#">{personal.location}</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          {quickLinks.map((link) => (
+            <li><a href={link.href}>{link.label}</a></li>
+          ))}
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Legal</h4>
+        <ul>
+          {legal.map((link) => (
+            <li><a href={link.href}>{link.label}</a></li>
+          ))}
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>{copyright}</p>
+      <p class="disclaimer">{disclaimer}</p>
+    </div>
+  </div>
+</footer>

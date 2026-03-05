@@ -1,0 +1,46 @@
+---
+interface PlanFeature { label: string; included: boolean; }
+interface Plan {
+  name: string;
+  price: string;
+  period: string;
+  featured: boolean;
+  badge?: string;
+  features: PlanFeature[];
+}
+
+interface Props {
+  title: string;
+  subtitle: string;
+  plans: Plan[];
+}
+
+const { title, subtitle, plans } = Astro.props;
+---
+<section class="pricing" id="pricing">
+  <div class="container">
+    <h2 class="section-title">{title}</h2>
+    <p class="section-subtitle">{subtitle}</p>
+    <div class="pricing-grid">
+      {plans.map((plan) => (
+        <div class={`pricing-card${plan.featured ? ' featured' : ''}`}>
+          {plan.badge && <div class="popular-badge">{plan.badge}</div>}
+          <h3>{plan.name}</h3>
+          <div class="price">
+            <span class="currency">$</span>
+            <span class="amount">{plan.price}</span>
+            <span class="period">{plan.period}</span>
+          </div>
+          <ul class="pricing-features">
+            {plan.features.map((f) => (
+              <li>{f.included ? '✓' : '✗'} {f.label}</li>
+            ))}
+          </ul>
+          <a href="#contact" class={`btn ${plan.featured ? 'btn-primary' : 'btn-outline'}`}>
+            Get Started
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

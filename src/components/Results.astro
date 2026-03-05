@@ -1,0 +1,33 @@
+---
+interface Testimonial { quote: string; name: string; initials: string; result: string; }
+
+interface Props {
+  title: string;
+  subtitle: string;
+  testimonials: Testimonial[];
+}
+
+const { title, subtitle, testimonials } = Astro.props;
+---
+<section class="results" id="results">
+  <div class="container">
+    <h2 class="section-title">{title}</h2>
+    <p class="section-subtitle">{subtitle}</p>
+    <div class="testimonials-grid">
+      {testimonials.map((t) => (
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p>"{t.quote}"</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">{t.initials}</div>
+            <div class="author-info">
+              <strong>{t.name}</strong>
+              <span>{t.result}</span>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

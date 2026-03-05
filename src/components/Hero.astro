@@ -1,0 +1,46 @@
+---
+interface Stat { number: string; label: string; }
+interface CTA { label: string; href: string; }
+
+interface Props {
+  headline: string;
+  subtitle: string;
+  ctaPrimary: CTA;
+  ctaSecondary: CTA;
+  stats: Stat[];
+}
+
+const { headline, subtitle, ctaPrimary, ctaSecondary, stats } = Astro.props;
+---
+<section class="hero" id="hero">
+  <video
+    autoplay
+    muted
+    playsinline
+    loop
+    poster="https://images.contentstack.io/v3/assets/bltc23b87e0fef43b66/blt694ae96e120449c7/682f555e5dce1367b6472e67/HOMEPAGE_Banner_Thumbnail.jpg?format=pjpg&auto=webp&quality=90"
+    class="hero-bg-video"
+  >
+    <source
+      src="https://assets.contentstack.io/v3/assets/bltc23b87e0fef43b66/blt6ec8c4aeb939de40/6765ae56989c53a90cd50963/TT1739_TFX-Tier-00HOMEPAGE_241220_02.mp4"
+      type="video/mp4"
+    />
+  </video>
+  <div class="hero-bg-overlay"></div>
+  <div class="container hero-content">
+    <h1>{headline}</h1>
+    <p class="hero-subtitle">{subtitle}</p>
+    <div class="hero-cta">
+      <a href={ctaPrimary.href} class="btn btn-primary">{ctaPrimary.label}</a>
+      <a href={ctaSecondary.href} class="btn btn-secondary">{ctaSecondary.label}</a>
+    </div>
+    <div class="hero-stats">
+      {stats.map((stat) => (
+        <div class="stat">
+          <span class="stat-number">{stat.number}</span>
+          <span class="stat-label">{stat.label}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

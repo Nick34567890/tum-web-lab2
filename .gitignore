@@ -1,0 +1,14 @@
+node_modules/
+
+# Astro build output
+dist/
+.astro/
+
+# TinaCMS generated (auto-rebuilt on dev start)
+tina/__generated__/
+public/admin/
+
+# Environment variables
+.env
+.env.local
+.env.production
