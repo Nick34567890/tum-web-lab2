@@ -2,11 +2,7 @@
 name: Deploy static content to Pages
 
 on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ["master"]
-
-  # Allows you to run this workflow manually from the Actions tab
+  # Disabled - Astro + TinaCMS workflow (deploy.yml on lab4) handles deployment
   workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
