@@ -6,7 +6,6 @@ dist/
 
 # TinaCMS generated (auto-rebuilt on dev start)
 tina/__generated__/
-public/admin/
 
 # Environment variables
 .env
