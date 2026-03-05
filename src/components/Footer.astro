@@ -10,7 +10,7 @@ interface Props {
   legal: LegalLink[];
 }
 
-const { copyright, disclaimer, personal, quickLinks, legal } = Astro.props;
+const { copyright, disclaimer, personal, quickLinks = [], legal = [] } = Astro.props;
 ---
 <footer class="footer">
   <div class="container">
