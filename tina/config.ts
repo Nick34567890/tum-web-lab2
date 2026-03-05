@@ -35,7 +35,6 @@ export default defineConfig({
         format: 'json',
         ui: {
           allowedActions: { create: false, delete: false },
-          router: () => '/',
         },
         match: { include: 'homepage' },
         fields: [
@@ -173,6 +172,20 @@ export default defineConfig({
                   { type: 'string', name: 'email', label: 'Email' },
                   { type: 'string', name: 'phone', label: 'Phone' },
                   { type: 'string', name: 'location', label: 'Location' },
+                ],
+              },
+              {
+                type: 'object', name: 'quickLinks', label: 'Quick Links', list: true,
+                fields: [
+                  { type: 'string', name: 'label', label: 'Label' },
+                  { type: 'string', name: 'href', label: 'URL' },
+                ],
+              },
+              {
+                type: 'object', name: 'legal', label: 'Legal Links', list: true,
+                fields: [
+                  { type: 'string', name: 'label', label: 'Label' },
+                  { type: 'string', name: 'href', label: 'URL' },
                 ],
               },
             ],

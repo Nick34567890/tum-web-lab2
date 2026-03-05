@@ -41,6 +41,20 @@ This section highlights the updated user interface for Lab 3. Below are screensh
 #### Screenshot 4: Only Mobile 
 ![alt text](screenshots/Lab_3_3.png)
 
+## Lab 4 - SSD(Astro) and CMS(Tina)
+
+#### Screenshot 1: General CMS 
+
+![alt text](screenshots/General_CMS.png)
+
+#### Screenshot 2: General CMS in Detail
+![alt text](screenshots/Main_CMS.png)
+
+#### Screenshot 3: Example of change
+![alt text](screenshots/p1.png)
+#### Screenshot 3.1: Example of change
+![alt text](screenshots/p2.png)
+
 ## Author
 
 Nichita Gancear
