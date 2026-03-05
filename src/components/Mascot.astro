@@ -1,0 +1,16 @@
+---
+interface Props {
+  tooltip: string;
+}
+const { tooltip } = Astro.props;
+---
+<a href="#contact" class="floating-mascot" id="floating-mascot" aria-label="Go to contact section">
+  <img src="/mascot/mm_main.png" alt="ForexPro mascot" />
+  <span class="mascot-tooltip">{tooltip}</span>
+</a>
+
+<script>
+  setTimeout(() => {
+    document.getElementById('floating-mascot')?.classList.add('show');
+  }, 1800);
+</script>

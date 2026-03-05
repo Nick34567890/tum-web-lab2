@@ -1,0 +1,118 @@
+{
+  "siteTitle": "ForexPro - Master the Markets",
+  "hero": {
+    "headline": "Trade Smarter, Not Harder",
+    "subtitle": "Professional forex signals, real-time market analysis, and expert guidance to help you succeed in the currency markets.",
+    "ctaPrimary": { "label": "Start Trading Today", "href": "#pricing" },
+    "ctaSecondary": { "label": "Learn More", "href": "#how-it-works" },
+    "stats": [
+      { "number": "85%", "label": "Win Rate" },
+      { "number": "10K+", "label": "Active Traders" },
+      { "number": "$2M+", "label": "Monthly Profits" }
+    ]
+  },
+  "features": {
+    "title": "Why Choose ForexPro?",
+    "subtitle": "Everything you need to succeed in forex trading",
+    "items": [
+      { "icon": "📊", "title": "Real-Time Signals", "description": "Get instant trading signals with entry, stop-loss, and take-profit levels delivered to your device." },
+      { "icon": "📈", "title": "Market Analysis", "description": "Daily technical and fundamental analysis from professional traders with years of experience." },
+      { "icon": "🎓", "title": "Trading Education", "description": "Comprehensive courses from beginner to advanced, with live webinars and 1-on-1 mentoring." },
+      { "icon": "🤖", "title": "Copy Trading", "description": "Automatically copy trades from our top-performing traders directly to your account." },
+      { "icon": "💬", "title": "Community Access", "description": "Join our private community of traders sharing strategies, insights, and support." },
+      { "icon": "📱", "title": "Mobile Alerts", "description": "Never miss a trade with push notifications and SMS alerts for all signals." }
+    ]
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Start trading in 3 simple steps",
+    "steps": [
+      { "number": "1", "title": "Sign Up", "description": "Create your free account and choose a plan that fits your trading goals." },
+      { "number": "2", "title": "Connect", "description": "Link your trading account or simply follow our signals manually." },
+      { "number": "3", "title": "Profit", "description": "Execute trades with confidence and watch your portfolio grow." }
+    ]
+  },
+  "results": {
+    "title": "Proven Results",
+    "subtitle": "See what our traders are achieving",
+    "testimonials": [
+      { "quote": "ForexPro changed my trading completely. I went from losing money to consistent profits in just 3 months!", "name": "Alex M.", "initials": "AM", "result": "+340% returns in 6 months" },
+      { "quote": "The signals are incredibly accurate. I now trade with confidence knowing I have expert analysis backing my decisions.", "name": "Sarah K.", "initials": "SK", "result": "Full-time trader since 2024" },
+      { "quote": "Best investment I've made. The education alone is worth 10x the subscription price. Highly recommend!", "name": "Michael R.", "initials": "MR", "result": "Quit 9-5 job after 8 months" }
+    ]
+  },
+  "pricing": {
+    "title": "Choose Your Plan",
+    "subtitle": "Flexible pricing for every trader",
+    "plans": [
+      {
+        "name": "Starter",
+        "price": "49",
+        "period": "/month",
+        "featured": false,
+        "features": [
+          { "label": "Daily trading signals", "included": true },
+          { "label": "Market analysis", "included": true },
+          { "label": "Community access", "included": true },
+          { "label": "Copy trading", "included": false },
+          { "label": "1-on-1 mentoring", "included": false }
+        ]
+      },
+      {
+        "name": "Professional",
+        "price": "99",
+        "period": "/month",
+        "featured": true,
+        "badge": "Most Popular",
+        "features": [
+          { "label": "All Starter features", "included": true },
+          { "label": "Premium signals", "included": true },
+          { "label": "Copy trading access", "included": true },
+          { "label": "Video courses", "included": true },
+          { "label": "1-on-1 mentoring", "included": false }
+        ]
+      },
+      {
+        "name": "Elite",
+        "price": "249",
+        "period": "/month",
+        "featured": false,
+        "features": [
+          { "label": "All Professional features", "included": true },
+          { "label": "1-on-1 mentoring", "included": true },
+          { "label": "Private Discord access", "included": true },
+          { "label": "Custom strategies", "included": true },
+          { "label": "Priority support", "included": true }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "title": "Ready to Start Trading?",
+    "subtitle": "Join thousands of successful traders today"
+  },
+  "footer": {
+    "copyright": "© 2026 ForexPro. All rights reserved.",
+    "disclaimer": "Trading forex involves significant risk. Past performance is not indicative of future results.",
+    "personal": {
+      "heading": "Personal Contact",
+      "email": "Nichita.Gancear.trader@gmail.com",
+      "phone": "+373 76633001",
+      "location": "Chișinău, Moldova"
+    },
+    "quickLinks": [
+      { "label": "Features", "href": "#features" },
+      { "label": "How It Works", "href": "#how-it-works" },
+      { "label": "Pricing", "href": "#pricing" },
+      { "label": "Contact", "href": "#contact" }
+    ],
+    "legal": [
+      { "label": "Terms of Service", "href": "#" },
+      { "label": "Privacy Policy", "href": "#" },
+      { "label": "Risk Disclosure", "href": "#" }
+    ]
+  },
+  "mascot": {
+    "tooltip": "👋 Welcome! Need help choosing a plan? Click me."
+  }
+}

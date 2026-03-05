@@ -1,0 +1,66 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import Features from '../components/Features.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import Results from '../components/Results.astro';
+import Pricing from '../components/Pricing.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+import Mascot from '../components/Mascot.astro';
+
+// Import content from JSON (managed by TinaCMS)
+import data from '../data/homepage.json';
+---
+
+<Layout title={data.siteTitle}>
+  <Navbar />
+
+  <Hero
+    headline={data.hero.headline}
+    subtitle={data.hero.subtitle}
+    ctaPrimary={data.hero.ctaPrimary}
+    ctaSecondary={data.hero.ctaSecondary}
+    stats={data.hero.stats}
+  />
+
+  <Features
+    title={data.features.title}
+    subtitle={data.features.subtitle}
+    items={data.features.items}
+  />
+
+  <HowItWorks
+    title={data.howItWorks.title}
+    subtitle={data.howItWorks.subtitle}
+    steps={data.howItWorks.steps}
+  />
+
+  <Results
+    title={data.results.title}
+    subtitle={data.results.subtitle}
+    testimonials={data.results.testimonials}
+  />
+
+  <Pricing
+    title={data.pricing.title}
+    subtitle={data.pricing.subtitle}
+    plans={data.pricing.plans}
+  />
+
+  <Contact
+    title={data.contact.title}
+    subtitle={data.contact.subtitle}
+  />
+
+  <Footer
+    copyright={data.footer.copyright}
+    disclaimer={data.footer.disclaimer}
+    personal={data.footer.personal}
+    quickLinks={data.footer.quickLinks}
+    legal={data.footer.legal}
+  />
+
+  <Mascot tooltip={data.mascot.tooltip} />
+</Layout>

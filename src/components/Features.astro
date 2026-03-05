@@ -1,0 +1,26 @@
+---
+interface Feature { icon: string; title: string; description: string; }
+
+interface Props {
+  title: string;
+  subtitle: string;
+  items: Feature[];
+}
+
+const { title, subtitle, items } = Astro.props;
+---
+<section class="features" id="features">
+  <div class="container">
+    <h2 class="section-title">{title}</h2>
+    <p class="section-subtitle">{subtitle}</p>
+    <div class="features-grid">
+      {items.map((feature) => (
+        <div class="feature-card">
+          <div class="feature-icon">{feature.icon}</div>
+          <h3>{feature.title}</h3>
+          <p>{feature.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
