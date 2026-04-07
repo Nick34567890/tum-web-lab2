@@ -197,13 +197,27 @@ def http_request(url):
 
 def cmd_url(url):
     if not url.startswith("http://") and not url.startswith("https://"):
-        url = "http://" + url
+        url = "https://" + url
 
     print(f"Fetching: {url}\n")
-    status, headers, body = http_request(url)
+
+    try:
+        status, headers, body = http_request(url)
+    except socket.gaierror:
+        print(f"Error: Could not resolve hostname.")
+        return
+    except socket.timeout:
+        print(f"Error: Connection timed out.")
+        return
+    except ConnectionRefusedError:
+        print(f"Error: Connection refused.")
+        return
+    except Exception as e:
+        print(f"Error: {e}")
+        return
 
     if status == 0:
-        print("Error: Could not connect to server.")
+        print("Error: Could not parse server response.")
         return
 
     print(f"Status: {status}")
