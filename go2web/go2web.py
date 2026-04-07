@@ -281,7 +281,7 @@ def cmd_search(term):
 
     # interactive link access
     print("-" * 60)
-    print("Enter a result number to visit the link (or press Enter to exit):")
+    print("Enter a result number to visit the link (or press Enter to exit)")
     try:
         choice = input("> ").strip()
         if choice.isdigit():
